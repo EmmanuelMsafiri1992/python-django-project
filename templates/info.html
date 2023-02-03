@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <section>
+      <input type="checkbox" id="check" />
+      <header>
+        <h2>
+          <a href="" class="logo"><img src="../static/itonline-logo.png" /></a>
+        </h2>
+        <div class="navigation">
+          <a href="">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'info' %}">Info</a>
+          <a href="{% url 'services' %}">Services</a>
+          <a href="{% url 'contact' %}">Contact</a>
+        </div>
+        <label for="check">
+          <i class="fas fa-bars menu-btn"></i>
+          <i class="fas fa-bars close-btn"></i>
+        </label>
+      </header>
+      <div class="content">
+        <div class="info">
+          <h2>More <br /><span>Info!</span></h2>
+          <p>
+          We are available 24/7. You can always reach out to us anytime, anywhere. Just Click the button below.
+          </p>
+          <a href="#" class="info-btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </section>
+  </body>
+</html>
